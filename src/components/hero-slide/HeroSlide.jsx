@@ -63,18 +63,18 @@ const HeroSildeItem = props => {
     const item = props.item;
     const background = apiConfig.originalImage(item.backdrop_path ? item.backdrop_path : item.poster_path);
 
-  // const setModalActive = async () => {
-  //   const modal = document.querySelector(`#modal_${item.id}`);
-  //   const videos = await tmdbApi.getMovies(category.movie,item.id);
-  //   if(videos.results.length > 0 ) {
-  //     const videoSrc = 'https://www.youtube.com/embed/' + videos.results[0].key;
-  //     modal.querySelector('.modal__content > iframe').setAttribute('src',videoSrc);
-  //   }
-  //   else {
-  //     modal.querySelector('.modal__content').innerHTML= 'No trailer';
-  //   }
-  //   modal.classList.toggle('active');
-  // }
+  const setModalActive = async () => {
+    const modal = document.querySelector(`#modal_${item.id}`);
+    const videos = await tmdbApi.getMovies(category.movie,item.id);
+    if(videos.results.length > 0 ) {
+      const videoSrc = 'https://www.youtube.com/embed/' + videos.results[0].key;
+      modal.querySelector('.modal__content > iframe').setAttribute('src',videoSrc);
+    }
+    else {
+      modal.querySelector('.modal__content').innerHTML= 'No trailer';
+    }
+    modal.classList.toggle('active');
+  }
 
 
 
@@ -90,7 +90,7 @@ const HeroSildeItem = props => {
                 <Button onclick={() => history.push('/movie/'+item.id)}>
                watch now
            </Button>
-           <OutlineButton  >
+           <OutlineButton onclick={()=> setModalActive()}  >
 
                watch trailer
            </OutlineButton>
