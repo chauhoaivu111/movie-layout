@@ -4,7 +4,7 @@ import "./Footer.scss";
 import { Link } from "react-router-dom";
 import bg from "../../assets/footer-bg.jpg";
 import logo from "../../assets/tmovie.png";
-// style={{backgroundImage: `url(${bg})`}}
+
 
 const Footer = () => {
   return (

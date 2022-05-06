@@ -1,6 +1,7 @@
 
 @use './scss/' as *;
-@import 'swiper/css';
+@import 'swiper/swiper-bundle.min.css';
+@import 'swiper/swiper.min.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Tapestry&display=swap');
 
