@@ -1,0 +1,143 @@
+@use "../../scss/" as *;
+
+.header {
+  height: $header-height;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  box-shadow: $box-shadow;
+//   make style transform:
+
+transition: height 0.3s ease, background-color 0.3 ease;
+
+//   style shrink
+&.shrink {
+  height: $header-shrink-height;
+  background-color: $body-bg;
+}
+
+
+  &__wrap {
+    padding: 1rem 2rem;
+    height: 100%;
+
+    // display space-between
+    @include flex(center, space-between);
+
+    @include mobile {
+      justify-content: center;
+      background-color: aquamarine
+
+    }
+
+    .logo {
+      // set center logo and left
+      @include flex(center, unset);
+      font-size: 2.5rem;
+      font-weight: 600;
+      a:hover {
+        color: unset;
+      }
+
+      img {
+        width: 50px;
+
+        @include mobile {
+          width: 30px;
+        }
+      }
+    }
+
+    &__second {
+      max-width: 70%;
+      // background-color: antiquewhite;
+      @include flex(center, space-between);
+      &__navbar {
+        @include flex(center, unset);
+        left: 0;
+        bottom: 0;
+
+        & > * ~ * {
+          margin-left: 3rem;
+
+         
+
+        }
+
+        
+
+        
+
+        li {
+          padding: 5px 0;
+          font-size: 1.5rem;
+          font-weight: 700;
+
+          // set defualt space
+          position: relative;
+
+          // create effect underline title
+
+          // use affter
+
+          &::after {
+            content: "";
+
+            width: 0;
+        
+            height: 2px;
+            transition: width 0.5s ease;
+            background-color: red;
+            transform: translate(-50%);
+            // make position absoluted and follow tittle
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+          }
+          // set active render and hover
+          &.active::after,
+          &:hover::after {
+            width: 100%;
+          }
+
+          
+        }
+
+
+
+        
+        // custome bottom header
+
+        @include mobile {
+           position: fixed;
+           left: 0;
+           bottom: 0;
+           box-shadow: $box-shadow;
+           width: 100%;
+           height: 5rem;
+           background-color: $body-bg;
+           padding: 0 2rem;
+           @include flex(center,space-between)
+           
+        }
+
+
+        &__secondelement{
+            margin-left: 10rem;
+
+          @include mobile{
+              margin-left: 4rem;
+          }
+        }
+        
+
+        
+      }
+
+     
+    }
+  }
+}
