@@ -10,9 +10,11 @@ function App() {
       <Route
         render={(props) => (
           <div>
-            <Header {...props} />
+            
+            {/* <Header {...props} /> */}
             <Routes/>
           </div>
+          
         )}
       />
     </BrowserRouter>

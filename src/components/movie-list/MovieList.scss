@@ -1,0 +1,83 @@
+@use '../../scss/' as *;
+
+
+
+.movie-list{
+
+    .swiper-slide{
+        width: 20%;
+      
+       
+        @include tablet {
+            width: 30%;
+        }
+        @include mobile{
+            width: 37%;
+        }
+    }
+ 
+
+    
+   
+}
+
+
+.movie-card{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 120%;
+    background-position: top;
+    margin-bottom: 1rem;
+    cursor: grab;
+    border-radius: $border-radius;
+
+    @include mobile {
+        border-radius: 20px;
+    }
+    
+
+   
+
+
+    .btn{
+        left: 50%;
+        top:50%;
+        position: absolute;
+
+        // style hover 
+        transform: translate(-50%,-50%) scale(0);
+        transition: transform .3s ease , box-shadow .3s ease;
+    }
+
+
+    // set style before
+    &::before{
+        border-radius: $border-radius;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color:$black;
+        opacity: 0;
+        transition: opacity .3s ease;
+    
+        
+    }
+    // set style cursor hover when move in slide
+    @media (hover: hover) and (pointer: fine) {
+        &hover::before {
+            // speech of button hover 
+            opacity: .8;
+        }
+        &:hover .btn {
+            transform: translate(-50%,-50%) scale(1);
+        }
+        }
+
+   
+
+   
+
+}

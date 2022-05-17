@@ -1,0 +1,66 @@
+@use '../../scss/' as *;
+
+
+button{
+    cursor: pointer;
+    font-family: $font-family;
+
+}
+
+.btn{
+    border-radius: $border-radius;
+    background-color: $main-color;
+    color: $white;
+    // set size button
+    padding: .7rem 1.8rem;
+    border: 4px solid transparent;
+    box-shadow: 0px 0px 7px 8px pink;
+    position: relative;
+    font-size: large;
+    font-family: $font-family;
+
+    // make style move slow hover
+    transition:  box-shadow .3s ease;
+
+    @include tablet {
+        border-width: 2px;
+        padding: 0.25rem 1.5rem;
+        font-size: 1rem;
+    }
+    @include mobile {
+        border-width: 2px;
+        padding: 0.25rem 1.5rem;
+        font-size: 1rem;
+        margin-left: 1.5rem;
+    }
+    
+
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 7px 15px pink;
+
+}
+
+.btn-outline{
+    box-shadow: unset;
+    color: $white;
+    font-size: large;
+    background-color: transparent;
+    border: 3px solid $white;
+    padding: .7rem 1.8rem;
+    border-radius: $border-radius;
+    transition:  color .3s ease background-color .3s ease;
+
+    @include tablet {
+        border-width: 2px;
+        padding: 0.25rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+.btn-outline:hover{
+    box-shadow: unset;
+    color: $main-color;
+    background-color: $white;
+
+}

@@ -70,7 +70,7 @@ useEffect(() => {
               </li>
             ))}
 
-            <p className="header__wrap__second__navbar__secondelement"><i class='bx bx-user' style={{fontSize:"3rem",cursor:"pointer"}}></i></p>
+            <p className="header__wrap__second__navbar__secondelement"><Link to = '/Login'><i class='bx bx-user' style={{fontSize:"3rem",cursor:"pointer"}}></i></Link></p>
           </ul>
 
           

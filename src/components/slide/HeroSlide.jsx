@@ -12,6 +12,8 @@ import 'swiper/components/pagination/pagination.min.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import {Link} from 'react-router-dom'
+import  Button ,{ButtonOutline} from '../button/Button'
 
   
   // install Swiper modules
@@ -102,9 +104,15 @@ const HeroSlideItem = props =>{
             <div className='hero-slide__item__content__infor'>
                 <p className='title'>{item.title}</p>
                 <p className='overview'>{item.review}</p>
-                <div className='btn'>
-                    <button>1</button>
-                    <button>2</button>
+                <div className='btns' >
+
+                    <Button>
+                        watch more
+                    </Button>
+
+                    <ButtonOutline>watch now</ButtonOutline>
+                    
+                   
 
 
                 </div>
