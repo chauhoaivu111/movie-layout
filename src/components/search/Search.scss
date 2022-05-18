@@ -1,0 +1,21 @@
+@use '../../scss/' as *;
+
+
+.search{
+    @include flex(center,unset);
+
+
+    input{
+        // height: 3rem;
+        background-color: $black;
+        border-radius: $border-radius;
+        border: 0;
+        color: $txt-color;
+        font-size: 1.5rem;
+        padding: 0.5rem 1.5rem;
+        margin-right: -2rem;
+
+    
+    }
+
+}

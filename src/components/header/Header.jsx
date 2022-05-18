@@ -14,7 +14,7 @@ const Header = () => {
 
     {
       display: "Movies",
-      path: "/movies",
+      path: "/Movie",
     },
 
     {

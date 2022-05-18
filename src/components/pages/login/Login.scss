@@ -1,0 +1,180 @@
+@use "../../../scss/" as *;
+
+.twitter_flow {
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  position: relative;
+  color: $black;
+
+  &__content {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    // position: absolute;
+    background-color: $white;
+
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__menu {
+      padding: 3rem 3rem;
+      width: 100%;
+      position: relative;
+
+      &__menus {
+        &__Logo {
+          .iconTwitter {
+            color: #1da1f2;
+            font-size: 5rem;
+          }
+        }
+
+        &__titile {
+          padding: 2rem 0;
+          @include mobile {
+            text-align: center;
+          }
+
+          h1 {
+            font-size: 6rem;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          h2 {
+            padding: 2rem 0;
+            font-size: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+        }
+
+        &__buttons {
+          margin-top: -2rem;
+          max-width: 50%;
+
+          @include tablet {
+            max-width: 40%;
+          }
+
+          @include mobile {
+            max-width: 80%;
+
+            margin: auto;
+          }
+
+          .frame_button {
+            margin-bottom: 1rem;
+
+            .apple_button {
+              i {
+                font-size: 1.5rem;
+                color: black;
+              }
+              &:hover {
+                background-color: #dedddd;
+              }
+            }
+
+            .phoneoremail {
+              background-color: #1da1f2;
+              color: $white;
+              font-family: 400;
+              font-size: large;
+              margin-top: 1.2rem;
+              &:hover {
+                background-color: #3f6ada;
+              }
+
+              @include mobile {
+                font-size: small;
+              }
+            }
+            h3 {
+              margin-top: 5rem;
+              margin-bottom: 1rem;
+            }
+
+            .sub_submit {
+              font-size: 0.9rem;
+              margin-top: 0.5rem;
+              span {
+                color: #1da1f2;
+              }
+            }
+          }
+          .divider_or {
+            @include flex(center, unset);
+
+            .dividers1 {
+              width: 40%;
+              margin-right: 0.5rem;
+            }
+
+            .dividers2 {
+              width: 46%;
+              margin-left: 0.5rem;
+            }
+          }
+
+          button {
+            height: 3rem;
+            width: 25rem;
+            border-radius: $border-radius;
+            border: 0.1px solid #dedddd;
+            background-color: $white;
+            font-size: 1rem;
+            font-weight: 400;
+
+            p {
+              padding-left: 0.5rem;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+    }
+
+    &__img {
+      img {
+        height: 100vh;
+
+        @include tablet {
+          height: 62vh;
+        }
+
+        @include mobile {
+          height: 50vh;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    background-color: white;
+    margin-top: -1rem;
+    padding: 1rem 1rem 1rem 1rem;
+
+    text-align: center;
+    & > * ~ * {
+      padding-left: 1rem;
+      color: gray;
+    }
+
+    .topcopyright {
+      color: gray;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .topcopyrightend {
+      color: gray;
+      cursor: none;
+    }
+  }
+}
