@@ -1,0 +1,50 @@
+@use  '../../../scss/' as *;
+
+
+
+.DOB{
+    margin-top: 1.5rem;
+    @include flex(center,center);
+    text-align: left;
+    justify-content: left;
+    width: 100%;
+    @include mobile{
+        width: 100%;
+        justify-content: center;
+    }
+    
+  
+}
+
+
+.months{
+    width: 20rem;
+    padding-left: 1rem;
+    @include mobile {
+        width: 8rem;
+       
+    }
+}
+.date{
+    
+    width: 6.5rem;
+    @include mobile {
+        max-width: 9.3rem;
+        
+    }
+}
+.years{
+    
+    width: 6.5rem;
+    @include mobile {
+        max-width: 9.3rem;
+       
+    }
+}
+.box{
+    margin-right: 1.6rem;
+    @include mobile{
+        margin-right: 1rem;
+   
+    }
+}

@@ -4,6 +4,7 @@ import BG from "../../../assets/login_bg.jpg";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Button, Divider } from "@mui/material";
 import GoogleIcon from "@mui/icons-material/Google";
+
 import { Link } from "react-router-dom";
 const Login = () => {
   return (
@@ -22,7 +23,7 @@ const Login = () => {
 
             <div className="twitter_flow__content__menu__menus__buttons">
               <div className="frame_button">
-                <Button>
+                <Button className="google_button">
                   <img src="https://chisnghiax.com/ncmaz/assets/Google.e6e5ddf2.svg" />
                   <p>Sign up with Google </p>
                 </Button>
@@ -41,9 +42,10 @@ const Login = () => {
               </div>
 
               <div className="frame_button">
-                <Button className="phoneoremail">
-                  <p>Sign up with phone or Email </p>
+             <Button className="phoneoremail">
+                 <p>Sign up with phone or Email </p> 
                 </Button>
+                
                 <p className="sub_submit">
                   By signing up, you agree to the{" "}
                   <span> Terms of Service </span> and{" "}
@@ -54,9 +56,10 @@ const Login = () => {
 
               <div className="frame_button">
                 <h3>Already have an account?</h3>
-                <Button>
+                <Link to='/Flow/Login'><Button>
                   <p>Sign in</p>
                 </Button>
+                </Link>
               </div>
             </div>
           </div>

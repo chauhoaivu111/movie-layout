@@ -4,15 +4,15 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
+import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import Typography from "@mui/material/Typography";
+import Portal from "@mui/material/Portal";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import "./FlowLogin.scss";
+import "./FlowSignUp.scss";
 import { Link } from "react-router-dom";
 import { Divider, TextField } from "@mui/material";
+import DOB from "../flowlogin/BOD";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -23,11 +23,18 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   },
 }));
 
-const FlowLogin = () => {
+const FlowSignUp = () => {
   const [open, setOpen] = React.useState(true);
 
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const [show, setShow] = React.useState(false);
+  const container = React.useRef(null);
+
+  const handleClick = () => {
+    setShow(!show);
   };
 
   return (
@@ -62,32 +69,12 @@ const FlowLogin = () => {
           <TwitterIcon className="iconlogo" />
         </div>
 
-        <div className="Flow-login__content">
-          <div className="Flow-login__content__title">
-            <h1>Sign in to Twitter</h1>
-          </div>
-          <div className="Flow-login__content__Buttons">
-            <div className="frame_button">
-              <Button className="google_button">
-                <img src="https://chisnghiax.com/ncmaz/assets/Google.e6e5ddf2.svg" />
-                <p>Sign up with Google </p>
-              </Button>
-            </div>
-
-            <div className="frame_button">
-              <Button className="apple_button">
-                <i class="bx bxl-apple"></i>
-                <p>Sign up with Apple </p>
-              </Button>
-            </div>
-            <div className="divider_or">
-              <Divider className="dividers1" />
-              or
-              <Divider className="dividers2" />
-            </div>
+        <div className="flow-sigup__content">
+          <div className="flow-sigup__content__title">
+            <h1>Create your account</h1>
           </div>
 
-          <div className="Flow-login__content__textfield">
+          <div className="flow-sigup__content__textfield">
             <TextField
               className="textinput"
               variant="outlined"
@@ -96,23 +83,52 @@ const FlowLogin = () => {
             />
           </div>
 
-          <div className="Flow-login__content__endButton">
+          <div>
+            <div className="flow-sigup__content__textfieldss">
+              {show ? (
+                <div container={container.current}>
+                  <TextField
+                    className="textinput"
+                    variant="outlined"
+                    label="Phone"
+                    inputProps={{ style: { fontWeight: "600" } }}
+                  />
+                </div>
+              ) : (
+                <div container={container.current}>
+                  <TextField
+                    className="textinput"
+                    variant="outlined"
+                    label="Email"
+                    inputProps={{ style: { fontWeight: "600" } }}
+                  />
+                </div>
+              )}
+
+              <div className="stylea">
+                <a type="button" onClick={handleClick}>
+                  {show ? "Use Email instead" : "Use phone instead"}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div  className="flow-sigup__content__dob">
+            <p className="dobs">Date of birth</p>
+            <p  className="dobss">This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</p>
+            
+          </div>
+
+          <div>
+            <DOB/>
+          </div>
+
+          <div className="flow-sigup__content__endButton">
             <div className="frame_button">
               <Button className="google_button">
                 <p>Next</p>
               </Button>
             </div>
-
-            <div className="frame_button">
-              <Button className="apple_button">
-                <p>Forgot password? </p>
-              </Button>
-            </div>
-          </div>
-          <div className="Flow-login__content__noaccount">
-              <p>
-                  Don't have an account?<Link to='/FlowSignUp'><span> Sign up</span></Link>
-              </p>
           </div>
         </div>
       </BootstrapDialog>
@@ -120,4 +136,4 @@ const FlowLogin = () => {
   );
 };
 
-export default FlowLogin;
+export default FlowSignUp;

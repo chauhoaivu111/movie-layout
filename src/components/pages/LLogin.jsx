@@ -101,3 +101,75 @@
 
 // export default Login
 
+
+
+// import * as React from 'react';
+// import Box from '@mui/material/Box';
+// import Portal from '@mui/material/Portal';
+
+// export default function SimplePortal() {
+//   const [show, setShow] = React.useState(false);
+//   const container = React.useRef(null);
+
+//   const handleClick = () => {
+//     setShow(!show);
+//   };
+
+//   return (
+//     <div>
+//       <button type="button" onClick={handleClick}>
+//         {show ? 'Unmount children' : 'Mount children'}
+//       </button>
+
+
+//       <Box>
+        
+//         {show ? (
+//           <Portal container={container.current}>
+//             <span>actually render here!</span>
+//           </Portal>
+//         ) :  <Portal container={container.current}>
+//         <span>But I!</span>
+//       </Portal>}
+//       </Box>
+      
+//     </div>
+//   );
+// }
+
+
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+
+export default function BasicSelect() {
+  const [age, setAge] = React.useState('');
+
+  const handleChange = (e) => {
+    setAge(e.target.value);
+  };
+
+  return (
+    <Box sx={{ minWidth: 120}}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={age}
+          label="Age"
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Ten</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem>
+          
+        </Select>
+      </FormControl>
+    </Box>
+  );
+}
+

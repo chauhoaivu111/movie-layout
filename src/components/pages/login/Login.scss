@@ -70,11 +70,22 @@
 
           .frame_button {
             margin-bottom: 1rem;
+            .google_button{
+              p{
+                font-weight: 500;
+              }
+            }
+            
 
             .apple_button {
               i {
                 font-size: 1.5rem;
                 color: black;
+              }
+              p{
+                color: black;
+                font-size: 1rem;
+                font-weight: 600;
               }
               &:hover {
                 background-color: #dedddd;
@@ -134,6 +145,7 @@
             p {
               padding-left: 0.5rem;
               text-transform: capitalize;
+              color: black;
             }
           }
         }

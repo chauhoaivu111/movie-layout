@@ -1,0 +1,208 @@
+@use "../../../scss/" as *;
+
+.props {
+  @include flex(center, unset);
+
+  .iconlogo {
+    margin-left: 37.5%;
+    color: #1da1f2;
+    font-size: 2.5rem;
+    @include mobile {
+      margin-left: 26%;
+    }
+  }
+}
+
+.flow-sigup__content {
+  width: 100%;
+  // background-color: #1da1f2
+  padding: 0 5rem 0 5rem;
+  text-align: center;
+
+  @include mobile {
+    padding: 0 2rem 0 2rem;
+  }
+
+  &__title {
+    text-align: left;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__Buttons {
+    margin-top: 2rem;
+    background-color: aquamarine;
+
+    .frame_button {
+      margin-bottom: 1.5rem;
+
+      .google_button {
+        p {
+          font-weight: 500;
+          color: black;
+        }
+      }
+
+      .apple_button {
+        margin-bottom: -0.7rem;
+        i {
+          font-size: 1.5rem;
+          color: black;
+        }
+        &:hover {
+          background-color: #dedddd;
+        }
+        p {
+          color: black;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+      }
+
+      h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    button {
+      height: 3rem;
+      width: 25rem;
+      border-radius: $border-radius;
+      border: 0.1px solid #dedddd;
+      background-color: $white;
+      font-size: 1rem;
+      font-weight: 400;
+
+      p {
+        padding-left: 0.5rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__textfield {
+    margin-top: 1rem;
+    // background-color: aquamarine;
+    width: 36rem;
+
+    @include mobile {
+      width: 100%;
+    }
+    .textinput {
+      width: 100%;
+    }
+  }
+
+  &__textfieldss {
+    margin-top: 2rem;
+    // background-color: aquamarine;
+    width: 36rem;
+
+    @include mobile {
+      width: 100%;
+    }
+    .textinput {
+      width: 100%;
+    }
+
+    .stylea {
+      text-align: right;
+      margin-top: 1rem;
+
+      a {
+        color: #1da1f2;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__endButton {
+    margin-top: 2rem;
+
+    .frame_button {
+      margin-bottom: 1.5rem;
+
+
+      .google_button {
+        margin-top: 6rem;
+
+        @include mobile{
+          margin-top: 4rem;
+        }
+        background-color: black;
+        &:hover {
+          background-color: #1d1c1c;
+        }
+        p {
+          font-weight: 500;
+          color: white;
+        }
+      }
+
+      .apple_button {
+        margin-bottom: -0.7rem;
+        i {
+          font-size: 1.5rem;
+          color: black;
+        }
+        &:hover {
+          background-color: #dedddd;
+        }
+        p {
+          color: black;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+      }
+
+      h3 {
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  button {
+    height: 3rem;
+    width: 25rem;
+    border-radius: $border-radius;
+    border: 0.1px solid #dedddd;
+    background-color: $white;
+    font-size: 1rem;
+    font-weight: 400;
+
+    p {
+      padding-left: 0.5rem;
+      text-transform: capitalize;
+    }
+  }
+
+  &__noaccount {
+    text-align: left;
+    margin-top: 7rem;
+    p {
+      color: #151515;
+      font-size: 1.1rem;
+      span {
+        color: #1da1f2;
+      }
+    }
+  }
+
+  &__dob{
+    text-align: left;
+    .dobs{
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    .dobss{
+      font-size: 1rem;
+      color:grey;
+      margin-top: 0.6rem;
+    }
+  }
+}

@@ -7,12 +7,19 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Movie from "../components/pages/movie/Movie";
 import TV from "../components/pages/tv/TV";
+import FlowLogin from "../components/pages/flowlogin/FlowLogin";
+import FlowSignUp from "../components/pages/flowsignup/FlowSignUp";
 
 const Routes = () => {
   return (
     <Switch>
-      {/* <Route path="/" exact component={Home} /> */}
+      
+      <>
       <Route path='/Login' component={Login}/>
+      <Route path ='/Flow/Login' component={FlowLogin}/>
+      <Route path='/FlowSignUp' component={FlowSignUp}/>
+
+      </>
      
     <>
     <Header />
