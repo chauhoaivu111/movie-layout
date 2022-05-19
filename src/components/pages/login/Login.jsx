@@ -42,9 +42,10 @@ const Login = () => {
               </div>
 
               <div className="frame_button">
-             <Button className="phoneoremail">
+            <Link to='/FlowSignUp'> <Button className="phoneoremail">
                  <p>Sign up with phone or Email </p> 
                 </Button>
+                </Link>
                 
                 <p className="sub_submit">
                   By signing up, you agree to the{" "}

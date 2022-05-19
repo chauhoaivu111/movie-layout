@@ -14,12 +14,12 @@ const Routes = () => {
   return (
     <Switch>
       
-      <>
+  
       <Route path='/Login' component={Login}/>
       <Route path ='/Flow/Login' component={FlowLogin}/>
       <Route path='/FlowSignUp' component={FlowSignUp}/>
 
-      </>
+  
      
     <>
     <Header />

@@ -4,15 +4,15 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
-import Box from "@mui/material/Box";
+
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import Portal from "@mui/material/Portal";
+
 import TwitterIcon from "@mui/icons-material/Twitter";
 import "./FlowSignUp.scss";
 import { Link } from "react-router-dom";
 import { Divider, TextField } from "@mui/material";
-import DOB from "../flowlogin/BOD";
+import DOB from "./BOD";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
